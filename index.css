@@ -9,7 +9,6 @@
   --slider-track-height: 25px;
   --slider-thumb-size: 12px;
   --gradient: linear-gradient(to right, var(--light-pink), var(--dark-pink) );
-  --radial-gradient: radial-gradient(circle, var(--dark-pink), var(--light-pink));
   --half-transparent: linear-gradient(to right, transparent 50%, var(--very-dark-blue) 50%);
   --tooltip-triangle-size: 15px;
 }
@@ -206,6 +205,38 @@ body {
   margin-top: 50px;
 }
 
+.attribution a {
+  color: var(--grey-blue);
+}
+
+@media(max-width: 1024px){
+  .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fylo-card {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .range-card{
+    text-align: center;
+    height: 140px; 
+  }
+}
+
+@media(max-width: 640px){
+  .fylo-card {
+    min-width: inherit;
+  }
+
+  .range-card{
+    min-width: inherit;
+    padding: 30px 25px 40px 25px;
+  }
+}
+
 @media(max-width: 375px){
   :root {
     --slider-track-height: 18px;
@@ -219,22 +250,8 @@ body {
 
   .container{
     width: 320px;
-    display: flex;
-    flex-direction: column;
     padding: 0;
     margin: 0;
-  }
-
-  .fylo-card {
-    min-width: inherit;
-    margin-bottom: 20px;
-    margin-right: 0;
-  }
-
-  .range-card{
-    min-width: inherit;
-    padding: 30px 25px 40px 25px;
-    text-align: center;
   }
 
   .range-card .title {
